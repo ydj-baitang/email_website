@@ -1,0 +1,6 @@
+.divw{width:370px; height:200px; padding:50px 0 0 0;margin:0 auto;border:1px solid #00f;}
+#cont{width:320px; height:160px; padding:0; margin:0 auto; font-family: Calibri; font-size:10pt;}
+#cont p{margin:25px 0;}
+#emailaddr, #psd{width:180px; height:16px; padding:2px 0; border:1px solid #aaf;}
+#errormsg{width:200px; height:40px; margin:0 auto; display:none; font-size:10pt;color:#f00;}
+input{border-radius:5px; }

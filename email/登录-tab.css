@@ -1,0 +1,75 @@
+.div{
+    width:371px;
+    height:270px;
+    margin:0 auto;
+    border:1px solid #00f; 
+    padding:0;
+}
+#tab{
+    width:100%; 
+    height:41px; 
+    margin:0; 
+    padding:0;
+}
+#tab a{
+    width:185px; 
+    height:40px; 
+    padding:0; 
+    margin:0; 
+    float:left; 
+    font-size:14pt; 
+    line-height:40px; 
+    text-align:center; 
+    text-decoration:none; 
+    color:#000;
+}
+.tab1{
+    background:#ccf; 
+    border-right:1px solid#00f; 
+    border-bottom:1px solid#00f;
+}
+.tab2{
+    background:#ccf; 
+    border-left:1px solid #00f; 
+    border-bottom:1px solid #00f;
+}
+.contdiv{
+    width:330px; 
+    height:160px; 
+    margin:0; 
+    padding:20px 10px 0;
+}
+.cont{
+    width:330px; 
+    height:160px; 
+    margin:0 auto; 
+    padding:0;
+    display:none;
+}
+#cont1{display:block;}
+.div>div>div p{
+    margin:25px 0; 
+    font-size:10pt; 
+    font-family:Calibri;
+}
+#emailaddr, #psd, #phoneno{
+    width:180px; 
+    height:16px; 
+    padding:2px 0; 
+    border:1px
+    solid #aaf; 
+    border-radius:5px; 
+    outline:none;
+}
+#errormsg{
+    width:200px; 
+    height:40px; 
+    color:#f00; font-size:10pt; 
+    margin:0 auto;
+    display:none;
+}
+.sbt, .btn{
+    width:100px; 
+    height:30px; 
+    border-radius:5px;
+}

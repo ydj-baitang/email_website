@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <script type="text/JavaScript" src="注册.js"></script>
+    <link rel="stylesheet" type="text/css" href="注册.css" />
+</head>
+<body>
+<div class="divshang"></div>
+<div class="divzhong">
+    <form id="form1" name="form1" method="post" onsubmit="return validate();" action="注册.php" enctype="multipart/form-data" >
+        <table width="600" align="center" cellpadding="0" cellspacing="0">
+            <tr><td class="td1">*邮箱地址</td>
+                <td class="td2">
+                    <input name="emailaddr" type="text" id="emailaddr" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" onblur="check()"/>@163.com
+                    <p>请输入有效的邮箱地址</p>
+                </td>
+            </tr>
+            <tr><td class="td1">*密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp码</td>
+                <td class="td2">
+                    <input name="psd1" type="password" id="psd1" required pattern="[a-zA-Z0-9_!@#$%^&*]{6,16}" />
+                    <p>6~16个字符,区分大小写</p>
+                </td>
+            </tr>
+            <tr><td class="td1">*确认密码</td>
+                <td class="td2">
+                    <input name="psd2" type="password" id="psd2" required />
+                    <p>请再次输入密码</p>
+                </td>
+            </tr>
+            <tr><td class="td1">*手机号码</td>
+                <td class="td2">
+                    <input name="phoneno" id="phoneno" required pattern="1[3|4|5|6|7|8|9]\d{9}"/>
+                    <p>请输入有效的手机号码</p>
+                </td>
+            </tr>
+            <tr><td class="td1">*验&nbsp;证&nbsp;码</td>
+                <td class="td2">
+                    <input name="useryzm" type="text" id="useryzm" required />
+                    <img src="yzm.php" name="yzm" id="yzm" align="top">
+                    <p>请输入图片中的字符 <span onclick="yzmupdate()" style="color:red">看不清楚?换一张</span></p>
+                </td>
+            </tr>
+            <tr><td class="td1">&nbsp;</td>
+                <td class="td2">
+                    <input type="submit" value="立即注册" onclick="return validate();"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="divxia"></div>
+</body>
+</html>
