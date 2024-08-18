@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -98,33 +98,33 @@
     <?php session_start();?>
 		<div class="wshdiv">
 			<div class="wshleft">
-				<img src="images/163logo.gif" align="middle"/>
+				<img src="../images/163logo.gif" align="middle"/>
 				<span class="emailaddr" readonly="readonly"><?php echo $_SESSION["emailaddr"]."@163.com"; ?></span>
 				<a href="#">邮箱</a>&nbsp;|&nbsp;
 				<a href="#">帮助</a>&nbsp;|&nbsp;
-				<a href="%E7%99%BB%E5%BD%95-tab.html">退出</a>
+				<a href="denglu-tab.html">退出</a>
 			</div>
 			<div class="wshright">
-				<input class="search" placeholder="支持邮件全文搜索" /><img src="images/search.png" align="top"  />
+				<input class="search" placeholder="支持邮件全文搜索" /><img src="../images/search.png" align="top"  />
 			</div>
 		</div>
 		<div class="bot">
 			<div id="leftdiv">
 				<div class="leftdivtop">
-					<img usemap="#map" src="images/writerecieve.jpg" border="0" />
+					<img usemap="#map" src="../images/writerecieve.jpg" border="0" />
 					<map name="map">
-    					<area shape="rect" coords="8,5,100,36" href="receiveemail.php" target="main">
-    					<area shape="rect" coords="101,6,192,36" href="writeemail.php" target="main">
+    					<area shape="rect" coords="8,5,100,36" href="../receiveemail.php" target="main">
+    					<area shape="rect" coords="101,6,192,36" href="../writeemail.php" target="main">
 					</map>
 				</div>
 				<div class="leftdivbot">
-					<p><a href="receiveemail.php" target='main'>收件箱</a></p>
+					<p><a href="../receiveemail.php" target='main'>收件箱</a></p>
 					<p><a href="#">草稿箱</a></p>
 					<p><a href="#">已发送</a></p>
-					<p><a href="deletedemail.php" target='main'>已删除</a></p>
+					<p><a href="../deletedemail.php" target='main'>已删除</a></p>
 				</div>
 			</div>
-			<div class="maindiv"><iframe name="main" id="main" width="auto" height="auto" frameborder="0" src="writeemail.php" scrolling="no" onload="iframeHeight()"></iframe></div>
+			<div class="maindiv"><iframe name="main" id="main" width="auto" height="auto" frameborder="0" src="../writeemail.php" scrolling="no" onload="iframeHeight()"></iframe></div>
 		</div>
 	</body>
 </html>

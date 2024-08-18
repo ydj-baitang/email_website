@@ -1,5 +1,5 @@
 <?php
-  	$conn = mysqli_connect('localhost','root','数据库密码', 'email');
+  	$conn = mysqli_connect('localhost','root','ydj12345', 'email');
   	$sql="select * from emailmsg where sender='wangaihua@163.com'";
   	if($res=mysqli_query($conn,$sql)){
   			echo "<table border='1' width='800' align='center'>";

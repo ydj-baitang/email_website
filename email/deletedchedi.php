@@ -2,7 +2,7 @@
   //获取用户选择的复选框提交的邮件序号
   $markup=$_POST['markup'];
   $cnt=count($markup);
-  $conn=mysqli_connect('localhost','root','数据库密码','email');
+  $conn=mysqli_connect('localhost','root','ydj12345','email');
   //使用循环结构逐条删除邮件
   for($i=0; $i<$cnt;$i++){
   	//定义查询语句，查询指定序号的邮件

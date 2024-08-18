@@ -61,7 +61,7 @@
 	<?php
 		session_start();
 		$uname = $_SESSION['emailaddr']."@163.com";
-		$conn=mysqli_connect('localhost','root','数据库密码','email','3306');
+		$conn=mysqli_connect('localhost','root','ydj12345','email','3306');
 		$sql="select * from emailmsg where (receiver like '{$uname}%' or receiver like '%;{$uname}%') and deleted=0";
 		$res=mysqli_query($conn,$sql);
 		$reccount=mysqli_num_rows($res);

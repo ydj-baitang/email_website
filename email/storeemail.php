@@ -17,7 +17,7 @@
   $subject=$_POST['subject'];
   $content=$_POST['content'];
   $datesorr=date("Y-m-d H:i");
-  $conn = mysqli_connect('127.0.0.1','root','数据库密码', 'email','3306');
+  $conn = mysqli_connect('127.0.0.1','root','ydj12345', 'email','3306');
   $receiverAll=explode(";",$receiver);
   $receiver="";
   for($i=0;$i<count($receiverAll);$i++){

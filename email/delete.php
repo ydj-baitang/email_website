@@ -3,7 +3,7 @@
 	$markup=$_POST['markup'];
 	$cnt=count($markup);
 	//连接打开数据库
-	$conn=mysqli_connect('localhost', 'root','数据库密码','email');
+	$conn=mysqli_connect('localhost', 'root','ydj12345','email');
 	//使用循环结构逐条处理
 	for($i=0;$i<$cnt;$i++){
 		//定义更新语句

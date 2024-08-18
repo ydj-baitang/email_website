@@ -1,6 +1,6 @@
 <?php
 header("Content-Type:text/html;charset=utf8");
-$conn=mysqli_connect('127.0.0.1','root','数据库密码',"email","3306");
+$conn=mysqli_connect('127.0.0.1','root','ydj12345',"email","3306");
 if(!$conn){
     die("错误编号是:" .mysqli_connect_errno() . "br />错误信息是:" . mysqli_connect_error());
 }

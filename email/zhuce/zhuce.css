@@ -1,0 +1,23 @@
+.divshang{width:965px; height:55px; padding:0px; margin:0 auto;
+background:url(../images/wbg_shang.JPG);}
+
+.divzhong{width:965px; height:auto; padding:40px 0px 0px; margin:0 auto;
+background:url(../images/wbg_zhong.JPG);}
+
+.divxia{width:965px; height:15px; padding:0px; margin:0 auto;
+background:url(../images/wbg_xia.JPG);}
+
+table .td1{width:150px; height:60px; font-size:12pt; text-align:right; vertical-align: top;}
+table .td2{width:450px; font-size:10pt; vertical-align: top;}
+table .td2 p{ margin:8px 0 0 0;color:#666;}
+
+table .td2 span{text-decoration:underline; color:#00f; cursor:pointer;}
+#psd1, #psd2, #phoneno{width:320px; border:1px solid #aaf;
+border-radius:2px;}
+#emailaddr, #useryzm{width:220px; border:1px solid #aaf;
+border-radius:2px;}
+
+.inp::-webkit-input-placeholder {color: #f00;}
+.inp:-moz-placeholder {color: #f00;}
+.inp::-moz-placeholder {color: #f00;}
+.inp:-ms-input-placeholder {color: #f00;}
