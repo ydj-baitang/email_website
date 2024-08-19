@@ -6,13 +6,15 @@
 
 2.直接克隆到本地git clone https://github.com/ydj-baitang/email_website.git
 
-3.需要修改config.php文件中的数据库连接信息
+3.修改create_email文件夹下的create_email.php文件中的数据库连接信息，执行create_email.php文件，即可创建数据库表和所需的初始数据。                        
+   
 
-4.需要手动创建一个数据库，在创建两个表，分别是usermsg和emailsmsg。
+4.需要修改config.php文件中的数据库连接信息，运行index.html文件，即可看到登陆界面。
 
-最后运行index.php即可。
 
-如果想在Ubuntu部署这个项目也是可以的
+
+
+如果想在Ubuntu部署这个项目也是可以的（此项目也可以在liunx、mac系统下部署）
 
 ##需要安装apache2、php、mysql
 
@@ -28,19 +30,12 @@ sudo apt-get install php php-mysql php-curl php-gd php-mbstring php-xml php-xmlr
 
 sudo apt-get install mysql-server
 
-设置数据库密码
+4.进入数据库，设置mysql密码
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '密码';
 
-4.创建数据库
 
-CREATE DATABASE email;
-
-5.接下来，将root用户授予对该email数据库的完全访问权限.
-
-GRANT ALL PRIVILEGES ON email.* TO 'root'@'localhost';
-
-6.将项目克隆到/var/www/html目录下
+5.将此项目项目克隆到/var/www/html目录下
 
 git clone https://github.com/ydj-baitang/email_website.git
 
@@ -48,11 +43,18 @@ cd email_website
 
 sudo mv email /var/www/html/email
 
-7.需要修改config.php文件中的数据库连接信息
+6.创建所需的数据库
 
-sudo vim /var/www/html/email/config.php
+修改create_email文件夹下的create_email.php文件中的数据库连接信息。
 
-运行脚本create_email.sh，既可以实现数据库表的创建。
+cd /var/www/html/email/create_email
+
+保存退出后运行脚本create_email.sh，既可以实现数据库表的创建，和所需数据库的创建。
+suod chmod +x create_email.sh       
 ./create_email.sh
 
+7.需要修改config.php文件中的数据库连接信息
+
 6.浏览器访问http://localhost/email即可看到登陆界面
+
+到此，部署完成。
