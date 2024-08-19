@@ -7,7 +7,8 @@
 2.直接克隆到本地git clone https://github.com/ydj-baitang/email_website.git
 
 3.需要修改config.php文件中的数据库连接信息
-运行脚本create_email.sh，既可以实现数据库的创建和表的创建。
+
+4.需要手动创建一个数据库，在创建两个表，分别是usermsg和emailsmsg。
 
 最后运行index.php即可。
 
