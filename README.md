@@ -40,9 +40,7 @@ cd email_website
 sudo mv email /var/www/html/email
 
 5.需要修改config.php文件中的数据库连接信息
-
 运行脚本create_email.sh，既可以实现数据库的创建和表的创建。
-
 ./create_email.sh
 
 6.浏览器访问http://localhost/email即可看到登陆界面
