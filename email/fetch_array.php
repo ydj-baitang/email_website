@@ -1,6 +1,6 @@
 <?php
-  	include 'config.php'; // 引入配置文件
-	$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
+	include_once 'config.php';
+  	$conn = get_db_connection();
   	$sql="select * from emailmsg where sender='wangaihua@163.com'";
   	if($res=mysqli_query($conn,$sql)){
   			echo "<table border='1' width='800' align='center'>";

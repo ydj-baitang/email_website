@@ -1,10 +1,11 @@
 <?php
 session_start();
-include '../config.php'; // 引入数据库配置文件
+include_once '../config.php';
 $emailaddr = $_POST['emailaddr'];
 $_SESSION['emailaddr'] = $emailaddr;
 $psd = md5($_POST['psd']);
-$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
+// 获取数据库连接
+$conn = get_db_connection();
 mysqli_select_db($conn,'email');
 $sql = "select * from usermsg where emailaddr = '{$emailaddr}' and psd ='{$psd}'";
 $result = mysqli_query($conn,$sql);

@@ -73,7 +73,7 @@
 		}
 		var sel = document.getElementById('pagesize');
 		sel.onchange=function(){
-			window.open("./deletedemail.php?pagesize=" + this.value, "_self");
+			window.open("deletedemail.php?pagesize=" + this.value, "_self");
 		}
 		/*//获取总控制复选框元素
 		var ctrl=document.getElementById('control');
@@ -94,9 +94,9 @@
 	<body>
 	<?php
 	session_start();
-	include './config.php';
+	include_once 'config.php';
 	$uname=$_SESSION['emailaddr']."@163.com";
-	$conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
+	$conn = get_db_connection();
 	$sql="select * from emailmsg where (receiver like '$uname%' or receiver like '%;$uname%') and deleted=1";
 	if($res=mysqli_query($conn,$sql)){
 		$emailNum=mysqli_num_rows($res);
@@ -110,7 +110,7 @@
 		echo "查询语句有误，请检查<br />";
 	}
 	?>
-	<form method="post" action="./deletedchedi.php">
+	<form method="post" action="deletedchedi.php">
 		<div class="div1">
 			<b>已删除邮件</b>(共<?php echo $emailNum; ?> 封)
 			&nbsp;&nbsp;每页
@@ -132,7 +132,7 @@
 			<div class="div2-1">
 				<input type="checkbox" id="control" />
 				<input type="submit" value=" 彻底删除 "  />
-				<input type="button" value=" 刷新 " onclick="window.open('./deletedemail.php' ,'_self')" />
+				<input type="button" value=" 刷新 " onclick="window.open('deletedemail.php' ,'_self')" />
 			</div>
 			<div class="div2-2">
 			<?php 

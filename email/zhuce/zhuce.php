@@ -1,8 +1,7 @@
 <?php
 header("Content-Type:text/html;charset=utf8");
 session_start();
-include '../config.php'; // 引入数据库配置文件
-
+include_once '../config.php';
 // 获取表单数据
 $emailaddr = $_POST['emailaddr'];
 $psd = $_POST['psd1'];
@@ -15,7 +14,7 @@ $zhucedate = date('Y-m-d H:i');
 // 验证码验证
 if (strtoupper($useryzm) == $yzmchar) {
     // 数据库连接
-    $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
+    $conn = get_db_connection();
     if (!$conn) {
         die("数据库连接失败: " . mysqli_connect_error());
     }

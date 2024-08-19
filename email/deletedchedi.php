@@ -1,10 +1,11 @@
 <?php
-include "./config.php";
-
-// 获取用户选择的复选框提交的邮件序号
-$markup = $_POST['markup'];
-$cnt = count($markup);
-$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
+  //引入数据库连接文件
+  include_once 'config.php';
+  //获取用户选择的复选框提交的邮件序号
+  $markup=$_POST['markup'];
+  $cnt=count($markup);
+  // 获取数据库连接
+  $conn = get_db_connection();
   //使用循环结构逐条删除邮件
   for($i=0; $i<$cnt;$i++){
   	//定义查询语句，查询指定序号的邮件
@@ -33,7 +34,7 @@ $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT
 	 	mysqli_query($conn,$sql);
   }
   mysqli_close($conn);
-  include "./deletedemail.php";
+  include "deletedemail.php";
   //输出脚本代码弹出消息框提示用户已删除的邮件数
   echo"<script>";
   echo"alert('成功删除{$cnt}封邮件')";

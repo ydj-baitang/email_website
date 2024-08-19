@@ -60,9 +60,9 @@
 	<body>
 	<?php
 		session_start();
-		include 'config.php'; // 引入配置文件
+		include_once 'config.php';
 		$uname = $_SESSION['emailaddr']."@163.com";
-		$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
+		$conn = get_db_connection();
 		$sql="select * from emailmsg where (receiver like '{$uname}%' or receiver like '%;{$uname}%') and deleted=0";
 		$res=mysqli_query($conn,$sql);
 		$reccount=mysqli_num_rows($res);
@@ -79,7 +79,7 @@
 		$res2 = mysqli_query($conn,$sql2);
 	?>
 	<script src="jquery-1.11.3.min.js"></script>	
-	<form method="post" action="./delete.php">
+	<form method="post" action="delete.php">
 		<div class="div1">
 			<b>收件箱</b>（共<?php echo $reccount; ?>封）
 			每页<select id="pagesize">
@@ -106,7 +106,7 @@
 			<div class="div2-1">
 				<input type="checkbox" id="control" />
 				<input type="submit" value=" 删除 "  />
-				<input type="button" value=" 刷新 " onclick="window.open('./receiveemail.php','_self')" />
+				<input type="button" value=" 刷新 " onclick="window.open('receiveemail.php','_self')" />
 			</div>
 			<div class="div2-2">
                 

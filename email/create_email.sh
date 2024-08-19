@@ -2,6 +2,7 @@
 
 # 定义 PHP 文件
 php_files=(
+    "create_email/create_email.php"
     "create_email/create_table_emailmsg.php"
     "create_email/create_table_usermsg.php"
 )
