@@ -39,10 +39,10 @@ cd email_website
 
 sudo mv email /var/www/html/email
 
-5.需要修改create_email文件夹下的所有文件中的数据库连接信息。（即$conn = mysqli_connect('127.0.0.1', 'root', '数据库密码', '','3306');如果只是密码不符合就改成自己的密码）
+5.需要修改config.php文件中的数据库连接信息
 
-5.还有就是修改denglu.php、zhuce.php、check.php、dalete.php、deletedchedi.php、deletedemail.php、email.php、fetch_array.php、get_rows_usermsg.php、openemail.php、receiveemail.php、storeemail.php、writeemail.php中的数据库连接信息。
 运行脚本create_email.sh，既可以实现数据库的创建和表的创建。
+
 ./create_email.sh
 
 6.浏览器访问http://localhost/email即可看到登陆界面
