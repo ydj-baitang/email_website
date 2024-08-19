@@ -2,7 +2,7 @@
 header("Content-Type:text/html;charset=utf8");
 
 // 包含数据库连接配置文件
-include './create_email/config.php'; // 确保路径正确
+include '../config.php'; // 确保路径正确
 
 // 创建数据库连接
 $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
