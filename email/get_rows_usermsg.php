@@ -1,6 +1,7 @@
 <?php
 header("Content-Type:text/html;charset=utf8");
-$conn=mysqli_connect('127.0.0.1','root','ydj12345',"email","3306");
+include 'config.php'; // 引入配置文件
+$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
 if(!$conn){
     die("错误编号是:" .mysqli_connect_errno() . "br />错误信息是:" . mysqli_connect_error());
 }

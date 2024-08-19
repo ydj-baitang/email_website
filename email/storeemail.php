@@ -1,4 +1,5 @@
 <?php
+include 'config.php'; // 引入配置文件
   $attachment='';
   for($i=1;$i<=10;$i++){
   	$fname=$_FILES["f{$i}"]["name"];
@@ -17,7 +18,7 @@
   $subject=$_POST['subject'];
   $content=$_POST['content'];
   $datesorr=date("Y-m-d H:i");
-  $conn = mysqli_connect('127.0.0.1','root','ydj12345', 'email','3306');
+  $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
   $receiverAll=explode(";",$receiver);
   $receiver="";
   for($i=0;$i<count($receiverAll);$i++){

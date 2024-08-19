@@ -67,9 +67,10 @@ $uname=$_SESSION['emailaddr']."@163.com";
 </head>
 <body>
 <?php
+include './config.php'; // 引入配置文件
 //获取超链接提交的邮件序号
 $emailno=$_GET['emailno'];
-$conn=mysqli_connect('127.0.0.1','root','ydj12345','email','3306');
+$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
 $sql="select * from emailmsg where emailno={$emailno}";
 $res=mysqli_query($conn, $sql);
 $row=mysqli_fetch_array($res);
