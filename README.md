@@ -31,7 +31,15 @@ sudo apt-get install mysql-server
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '密码';
 
-4.将项目克隆到/var/www/html目录下
+4.创建数据库
+CREATE DATABASE email;
+
+
+5.接下来，将email用户授予对该email数据库的完全访问权限：
+
+GRANT ALL PRIVILEGES ON email.* TO 'root'@'localhost';
+
+6.将项目克隆到/var/www/html目录下
 
 git clone https://github.com/ydj-baitang/email_website.git
 
@@ -39,8 +47,11 @@ cd email_website
 
 sudo mv email /var/www/html/email
 
-5.需要修改config.php文件中的数据库连接信息
-运行脚本create_email.sh，既可以实现数据库的创建和表的创建。
+7.需要修改config.php文件中的数据库连接信息
+
+sudo vim /var/www/html/email/config.php
+
+运行脚本create_email.sh，既可以实现数据库表的创建。
 ./create_email.sh
 
 6.浏览器访问http://localhost/email即可看到登陆界面
