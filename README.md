@@ -36,7 +36,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '密码';
 CREATE DATABASE email;
 
 
-5.接下来，将email用户授予对该email数据库的完全访问权限：
+5.接下来，将root用户授予对该email数据库的完全访问权限.
 
 GRANT ALL PRIVILEGES ON email.* TO 'root'@'localhost';
 
