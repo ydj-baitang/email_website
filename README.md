@@ -33,8 +33,8 @@ sudo apt-get install mysql-server
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '密码';
 
 4.创建数据库
-CREATE DATABASE email;
 
+CREATE DATABASE email;
 
 5.接下来，将root用户授予对该email数据库的完全访问权限.
 
